@@ -30,7 +30,7 @@ export default function ConnectedAccountsCard() {
               </span>
               <div className={styles.accountBody}>
                 <div className={styles.accountName}>{meta.label}</div>
-                <div className={styles.accountHandle}>{account.username || account.email || "Connected"}</div>
+                <div className={styles.accountHandle}>{account.username || account.email || "Connect]]ed"}</div>
               </div>
               <span className={styles.accountStatus} />
             </div>
