@@ -1,0 +1,324 @@
+.header {
+  height: 64px;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 20px;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+  position: relative;
+  z-index: 30;
+}
+
+.iconButton {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 11px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--muted);
+  cursor: pointer;
+  flex: 0 0 auto;
+  position: relative;
+}
+
+.iconButton:hover {
+  background: var(--nav-hover);
+  color: var(--text);
+}
+
+.dot {
+  position: absolute;
+  top: 9px;
+  right: 10px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--error);
+  border: 2px solid var(--surface);
+}
+
+.search {
+  position: relative;
+  flex: 0 1 380px;
+  display: flex;
+  align-items: center;
+  min-width: 0;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 12px;
+  display: flex;
+  color: var(--muted);
+  pointer-events: none;
+}
+
+.searchInput {
+  width: 100%;
+  height: 40px;
+  padding: 0 44px 0 36px;
+  border-radius: 11px;
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  color: var(--text);
+  font: inherit;
+  font-size: 13.5px;
+  outline: none;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.searchInput:focus {
+  border-color: var(--primary);
+  background: var(--surface);
+}
+
+.searchKbd {
+  position: absolute;
+  right: 10px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--muted);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 2px 6px;
+  line-height: 1;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.createButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  height: 40px;
+  padding: 0 15px;
+  border-radius: 11px;
+  border: none;
+  background: var(--primary);
+  color: #fff;
+  font: inherit;
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(99, 102, 241, 0.32);
+  transition: background 0.15s, transform 0.12s;
+  flex: 0 0 auto;
+}
+
+.createButton:hover {
+  background: var(--primary-600);
+}
+
+.createButton:active {
+  transform: scale(0.97);
+}
+
+.menuAnchor {
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.menu {
+  position: absolute;
+  top: 52px;
+  right: 0;
+  width: 328px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow-lg);
+  padding: 8px;
+  animation: scPop 0.16s ease both;
+  z-index: 50;
+}
+
+.menuNarrow {
+  width: 250px;
+}
+
+.menuHeaderRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 10px 10px;
+}
+
+.menuTitle {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.menuAction {
+  font-size: 12px;
+  color: var(--primary);
+  font-weight: 600;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-family: inherit;
+  padding: 0;
+}
+
+.menuAction:hover {
+  text-decoration: underline;
+}
+
+.notifRow {
+  display: flex;
+  gap: 11px;
+  padding: 10px;
+  border-radius: 11px;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  width: 100%;
+  text-align: left;
+  font: inherit;
+}
+
+.notifRow:hover {
+  background: var(--nav-hover);
+}
+
+.notifIcon {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+}
+
+.notifBody {
+  min-width: 0;
+}
+
+.notifText {
+  font-size: 13px;
+  color: var(--text);
+  line-height: 1.4;
+}
+
+.notifTime {
+  font-size: 11.5px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.userTrigger {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 40px;
+  padding: 3px 8px 3px 3px;
+  border-radius: 11px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  cursor: pointer;
+}
+
+.userTrigger:hover {
+  background: var(--nav-hover);
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  background: linear-gradient(135deg, #14b8a6, #6366f1);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-size: 12.5px;
+  font-weight: 700;
+  flex: 0 0 auto;
+  overflow: hidden;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatarLarge {
+  width: 40px;
+  height: 40px;
+  border-radius: 11px;
+  font-size: 14px;
+}
+
+.userSummary {
+  display: flex;
+  gap: 11px;
+  align-items: center;
+  padding: 8px 10px 12px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 6px;
+}
+
+.userName {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.userEmail {
+  font-size: 12px;
+  color: var(--muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  width: 100%;
+  padding: 9px 10px;
+  border-radius: 9px;
+  border: none;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  font-size: 13.5px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.menuItem:hover {
+  background: var(--nav-hover);
+}
+
+.menuItem svg {
+  color: var(--muted);
+  flex: 0 0 auto;
+}
+
+.menuItemDanger {
+  color: var(--error);
+  font-weight: 500;
+}
+
+.menuItemDanger:hover {
+  background: rgba(239, 68, 68, 0.09);
+}
+
+.menuItemDanger svg {
+  color: var(--error);
+}
+
+.menuDivider {
+  height: 1px;
+  background: var(--border);
+  margin: 6px 4px;
+}

@@ -1,0 +1,57 @@
+.shell {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.content {
+  flex: 1;
+  overflow-y: auto;
+  background: var(--bg);
+  position: relative;
+}
+
+.toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 13px 18px 13px 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  box-shadow: var(--shadow-lg);
+  animation: scToast 0.25s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  max-width: min(90vw, 380px);
+}
+
+.toastIcon {
+  width: 30px;
+  height: 30px;
+  border-radius: 9px;
+  background: rgba(16, 185, 129, 0.14);
+  color: #10b981;
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+}
+
+.toastText {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--text);
+}
